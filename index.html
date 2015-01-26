@@ -1,106 +1,137 @@
-<html lang="en">
-  <head>
-  	<meta charset="utf-8">
-    <title>CSS3 3D Push Buttons</title>
-    <meta name="description" content="Using CSS3 to create 3d push buttons">
-    <style>
-      body
-      {
-      padding: 50px;
-      }
-      .button
-      {
-      position: relative;
-      padding: 10px 20px;
-      margin: 0px 10px 10px 0px;
-      float: left;
-      border-radius: 3px;
-      font-family: 'Roboto Condensed';
-      font-size: 14px;
-      color: #FFF;
-      text-decoration: none;	
-      }
-      .default{
-      background-color: transparent;
-      border: 1px solid #ccc;
-      color: #333;
-      border-bottom: 3px solid #ccc;
-      }
-      .beige{
-      color: #333;
-      background-color: #E5DDCB;
-      border-bottom: 3px solid #cdc5b5;
-      }
-      .purple{
-      background-color: #524656;
-      border-bottom: 3px solid #4a3e4c;
-      text-shadow: 0px -1px #4a3e4c;
-      }
-      .orange{
-      background-color: #EB7B59;
-      border-bottom: 3px solid #da6d50;
-      text-shadow: 0px -1px #da6d50;
-      }
-      .emerald{
-      background-color: #A7C5BD;
-      border-bottom: 3px solid #92b1a9 ;
-      text-shadow: 0px -1px #92b1a9 ;
-      }
-      .organic-green{
-      background-color: #96A389;
-      border-bottom: 3px solid #85927b;
-      text-shadow: 0px -1px #85927b;
-      }
-      .organic-brown{
-      background-color: #635959;
-      border-bottom: 3px solid #594f4f ;
-      text-shadow: 0px -1px #594f4f ;
-      }
-      .blue
-      {
-      background-color: #3498DB;
-      border-bottom: 3px solid #2980B9;
-      text-shadow: 0px -1px #2980B9;
-      }
-      .red
-      {
-      background-color: #CF4647;
-      border-bottom: 3px solid #c23c40;
-      text-shadow: 0px -1px #c23c40;
-      }
-      .green
-      {
-      background-color: #82BF56;
-      border-bottom: 3px solid #669644;
-      text-shadow: 0px -1px #669644;
-      }
-      .yellow
-      {
-      background-color: #F2CF66;
-      border-bottom: 3px solid #D1B358;
-      text-shadow: 0px -1px #D1B358;
-      }
-      .button:active
-      {
-      transform: translate(0px,3px);
-      -webkit-transform: translate(0px,3px);
-      border-bottom: 1px solid #ddd; 
-      }
-    </style>
-      <link rel="stylesheet" href="styles.css">
-      <!-- prettyify -->
-      <link rel="stylesheet" href="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.css">
-      <script src="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js"></script>
-  </head>
-  <body>
-    <a href="#" class="button default">.button .default</a>  
-    <a href="#" class="button beige">.button .beige</a>
-    <a href="#" class="button purple">.button .purple</a>
-    <a href="#" class="button red">.button .red</a>
-    <a href="#" class="button orange">.button .orange</a>
-    <a href="#" class="button emerald">.button .emerald</a>
-    <a href="#" class="button green">.button .green</a>
-    <a href="#" class="button organic-green">.button .organic-green</a>
-    <a href="#" class="button organic-brown">.button .organic-brown</a>
-  </body>
-</html>
+body
+{
+	padding: 50px;
+}
+
+// Colours
+
+$grey : #333;
+$grey-dark : darken( $grey, 10% ) ;
+$grey-light : lighten( $grey, 40% );
+
+$beige : #E5DDCB;
+$beige-dark : darken( $beige, 10% ) ;
+$beige-light : lighten( $beige, 10% );
+
+$purple : #524656;
+$purple-dark : darken( $purple, 10% ) ;
+$purple-light : lighten( $purple, 10% );
+
+$red : #E5DDCB;
+$red-dark : darken( $red, 10% ) ;
+$red-light : lighten( $red, 10% );
+
+$orange : #EB7B59;
+$orange-dark : darken( $orange, 10% ) ;
+$orange-light : lighten( $orange, 10% );
+
+$emerald : #A7C5BD;
+$emerald-dark : darken( $emerald, 10% ) ;
+$emerald-light : lighten( $emerald, 10% );
+
+$green : #82BF56;
+$green-dark : darken( $green, 10% ) ;
+$green-light : lighten( $green, 10% );
+
+$organic-green : #96A389;
+$organic-green-dark : darken( $organic-green, 10% ) ;
+$organic-green-light : lighten( $organic-green, 10% );
+
+$organic-brown : #635959;
+$organic-brown-dark : darken( $organic-brown, 10% ) ;
+$organic-brown-light : lighten( $organic-brown, 10% );
+
+
+.btn
+{
+	padding: 12px 12px;
+	margin: 0px 12px 12px 0px;
+	float: left;
+	border-radius: 3px;
+	font-family: 'Roboto';
+	font-size: 14px;
+	color: #FFF;
+	text-decoration: none;	
+
+	&.btn:hover
+	{
+		transform: translate(0px,1px);
+		-webkit-transform: translate(0px,1px);
+		
+	}
+	&.btn:active
+	{
+		transform: translate(0px,3px);
+		-webkit-transform: translate(0px,3px);
+		border-bottom: 1px solid #ddd; 
+	}
+}
+
+.default{
+	background-color: transparent;
+	border: 1px solid $grey-light;
+	color: $grey;
+	border-bottom: 3px solid $grey-light;
+}
+
+.beige{
+	color: $grey;
+	background-color: $beige;
+	border-bottom: 3px solid $beige-dark;
+}
+
+.purple{
+	background-color: $purple;
+	border-bottom: 3px solid $purple-dark;
+	text-shadow: 0px -1px $purple-dark;
+}
+.orange{
+	background-color: #EB7B59;
+	border-bottom: 3px solid $orange-dark;
+	text-shadow: 0px -1px $orange-dark;
+}
+
+.emerald{
+	background-color: #A7C5BD;
+	border-bottom: 3px solid $emerald-dark;
+	text-shadow: 0px -1px $emerald-dark;
+}
+.organic-green{
+	background-color: #96A389;
+	border-bottom: 3px solid $organic-green-dark;
+	text-shadow: 0px -1px $organic-green-dark;
+}
+.organic-brown{
+	background-color: #635959;
+	border-bottom: 3px solid $organic-brown-dark;
+	text-shadow: 0px -1px $organic-brown-dark;
+}
+
+.blue
+{
+	background-color: #3498DB;
+	border-bottom: 3px solid #2980B9;
+	text-shadow: 0px -1px #2980B9;
+}
+
+.red
+{
+	background-color: #CF4647;
+	border-bottom: 3px solid #c23c40;
+	text-shadow: 0px -1px #c23c40;
+}
+
+.green
+{
+	background-color: #82BF56;
+	border-bottom: 3px solid #669644;
+	text-shadow: 0px -1px #669644;
+}
+
+.yellow
+{
+	background-color: #F2CF66;
+	border-bottom: 3px solid #D1B358;
+	text-shadow: 0px -1px #D1B358;
+}
+
