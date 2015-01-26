@@ -4,12 +4,16 @@
     <title>CSS3 3D Push Buttons</title>
     <meta name="description" content="Using CSS3 to create 3d push buttons">
     <style>
-    body {
+      body {
   padding: 50px;
 }
 
+h1, h2, h3, h4 {
+  clear: both;
+}
+
 .btn {
-  padding: 12px 12px;
+  padding: 12px;
   margin: 0px 12px 12px 0px;
   float: left;
   border-radius: 3px;
@@ -26,6 +30,22 @@
   transform: translate(0px, 3px);
   -webkit-transform: translate(0px, 3px);
   border-bottom: 1px solid #ddd;
+}
+
+.btn-large {
+  border-radius: 4px;
+  font-size: 20px;
+  padding: 16px;
+}
+
+.btn-small {
+  border-radius: 2px;
+  font-size: 12px;
+}
+
+.btn-extra-small {
+  border-radius: 2px;
+  font-size: 10px;
 }
 
 .default {
@@ -94,6 +114,7 @@
   border-bottom: 3px solid #D1B358;
   text-shadow: 0px -1px #D1B358;
 }
+
 
     </style>
       <link rel="stylesheet" href="styles.css">
