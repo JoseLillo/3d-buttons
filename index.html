@@ -6,19 +6,23 @@
     <style>
       body {
   padding: 50px;
+  font-family: 'Open sans';
 }
 
 h1, h2, h3, h4 {
   clear: both;
 }
 
+.strong {
+  font-weight: 700;
+}
+
 .btn {
-  padding: 12px;
+  padding: 8px 12px;
   margin: 0px 12px 12px 0px;
   float: left;
   border: 1px solid transparent;
   border-radius: 3px;
-  font-family: 'Roboto';
   font-size: 14px;
   color: #FFF;
   text-decoration: none;
@@ -26,38 +30,57 @@ h1, h2, h3, h4 {
 .btn:hover {
   transform: translate(0px, 1px);
   -webkit-transform: translate(0px, 1px);
+  opacity: 0.9;
 }
 .btn:active {
   transform: translate(0px, 3px);
   -webkit-transform: translate(0px, 3px);
   border-bottom: 1px solid #ddd;
+  opacity: 1;
+}
+.btn .fa {
+  border: 1px solid #f00;
+  height: 50px;
 }
 
 .btn-large {
-  border-radius: 4px;
+  border-radius: 3px;
   font-size: 20px;
-  padding: 16px;
+  padding: 12px 16px;
 }
 
 .btn-small {
-  border-radius: 2px;
   font-size: 12px;
 }
 
 .btn-extra-small {
-  border-radius: 2px;
   font-size: 10px;
+}
+
+.btn-title {
+  display: block;
+  padding: 0 6px;
+  line-height: 1;
+}
+
+.btn-label {
+  display: block;
+  padding: 0 6px;
+  font-size: 60%;
+  text-variation: italic;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .default {
   background-color: transparent;
   border: 1px solid #999999;
-  color: #333;
+  color: #666;
   border-bottom: 3px solid #999999;
 }
 
 .beige {
-  color: #333;
+  color: #666;
   background-color: #E5DDCB;
   border-bottom: 3px solid #d4c7a9;
 }
@@ -124,7 +147,7 @@ h1, h2, h3, h4 {
       <script src="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js"></script>
   </head>
   <body>
-      <h1>Large</h1>
+  <h1>Large</h1>
   <a href="#" class="btn btn-large default">.button .default</a> 
   <a href="#" class="btn btn-large beige">.button .beige</a>
   <a href="#" class="btn btn-large purple">.button .purple</a>
@@ -134,8 +157,39 @@ h1, h2, h3, h4 {
   <a href="#" class="btn btn-large green">.button .green</a>
   <a href="#" class="btn btn-large organic-green">.button .organic-green</a>
   <a href="#" class="btn btn-large organic-brown">.button .organic-brown</a>
+  
+  <h1>Large with label</h1>
+  <a href="#" class="btn btn-large default strong">
+    <span class="btn-title">.button .default</span>
+    <span class="btn-label">This is a label in a button</span>
+  </a> 
+  <a href="#" class="btn btn-large beige strong">
+    <span class="btn-title">.button .beige</span>
+    <span class="btn-label">This is a label in a button</span></a>
+  <a href="#" class="btn btn-large purple strong">
+    <span class="btn-title">.button .purple</span>
+    <span class="btn-label">This is a label in a button</span></a>
+  <a href="#" class="btn btn-large red strong">
+    <span class="btn-title">.button .red</span>
+    <span class="btn-label">This is a label in a button</span></a>
+  <a href="#" class="btn btn-large orange strong">
+    <span class="btn-title">.button .orange</span>
+    <span class="btn-label">This is a label in a button</span></a>
+  <a href="#" class="btn btn-large emerald strong">
+    <span class="btn-title">.button .emerald</span>
+    <span class="btn-label">This is a label in a button</span></a>
+  <a href="#" class="btn btn-large green strong">
+    <span class="btn-title">.button .green</span>
+    <span class="btn-label">This is a label in a button</span></a>
+  <a href="#" class="btn btn-large organic-green strong">
+    <span class="btn-title">.button .organic-green</span>
+    <span class="btn-label">This is a label in a button</span></a>
+  <a href="#" class="btn btn-large organic-brown strong">
+    <span class="btn-title">.button .organic-brown</span>
+    <span class="btn-label">This is a label in a button</span></a>
+  
   <h2>Default</h2>
-  <a href="#" class="btn default">.button .default</a> 
+  <a href="#" class="btn default strong">.button .default</a> 
   <a href="#" class="btn beige">.button .beige</a>
   <a href="#" class="btn purple">.button .purple</a>
   <a href="#" class="btn red">.button .red</a>
@@ -144,7 +198,8 @@ h1, h2, h3, h4 {
   <a href="#" class="btn green">.button .green</a>
   <a href="#" class="btn organic-green">.button .organic-green</a>
   <a href="#" class="btn organic-brown">.button .organic-brown</a>
-    <h3>Small</h3>
+  
+  <h3>Small</h3>
   <a href="#" class="btn btn-small default">.button .default</a> 
   <a href="#" class="btn btn-small beige">.button .beige</a>
   <a href="#" class="btn btn-small purple">.button .purple</a>
@@ -154,6 +209,7 @@ h1, h2, h3, h4 {
   <a href="#" class="btn btn-small green">.button .green</a>
   <a href="#" class="btn btn-small organic-green">.button .organic-green</a>
   <a href="#" class="btn btn-small organic-brown">.button .organic-brown</a>
+  
   <h4>Extra small</h4>
   <a href="#" class="btn btn-extra-small default">.button .default</a> 
   <a href="#" class="btn btn-extra-small beige">.button .beige</a>
